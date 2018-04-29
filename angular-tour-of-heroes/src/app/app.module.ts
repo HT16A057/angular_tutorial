@@ -13,6 +13,13 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+// httpを通してリモートサーバーと通信するための仕組みに必要
+import { HttpClientModule } from '@angular/common/http';
+
+// in memory web APIをインポート
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +31,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule // 双方向バインディングを可能にするngModule
+    AppRoutingModule, // 双方向バインディングを可能にするngModule
+    HttpClientModule,
+    // HttpClientInMemoryWebApiModuleモジュールはHTTPリクエストを
+    // 横取りして、かつサーバーをシミュレートしたかのように
+    // 動作する
+    // もし本物のサーバーを使うときはこれらの機能を消しておく
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
     // MessageService,
   providers: [

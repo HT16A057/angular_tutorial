@@ -34,4 +34,14 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 
+  // HTTPの章に入るまではgoBackを押しても変更が反映されていたが
+  // in-memory-web-api-moduleを利用してからは、仮想のサーバーを相手にしているから
+  // データが保存されずにもとの値が表示される。
+  // その問題を解決するための関数を定義する
+  save(): void {
+    this.heroService.updateHero(this.hero).subscribe(() => this.goBack());  // 保存してから戻る
+  }
+
+ 
+
 }
