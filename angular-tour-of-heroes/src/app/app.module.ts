@@ -18,12 +18,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 // in memory web APIをインポート
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
+    HeroSearchComponent,
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent
