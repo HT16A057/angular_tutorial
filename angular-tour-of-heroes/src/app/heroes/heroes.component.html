@@ -1,3 +1,13 @@
+<!-- ヒーローの追加 -->
+<div>
+    <label>Hero name:
+        <input #heroName />
+    </label>
+    <!-- (click) 入力値をadd()に渡したあと、入力をクリア -->
+    <button (click)="add(heroName.value); heroName.value=''">
+        add
+    </button>
+</div>
 <h2>My Heroes</h2>
 <ul class="heroes">
     <li *ngFor="let hero of heroes">
