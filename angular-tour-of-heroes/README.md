@@ -1,4 +1,4 @@
-[自分用Angularメモ]:https://github.com/HT16A057/angular_tutorial/blob/master/memo.md
+[自分用Angularメモ]:(https://github.com/HT16A057/angular_tutorial/blob/master/memo.md)
 
 # AngularTourOfHeroes
 
