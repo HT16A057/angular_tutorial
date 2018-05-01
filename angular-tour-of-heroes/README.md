@@ -1,3 +1,5 @@
+[自分用Angularメモ]:https://github.com/HT16A057/angular_tutorial/blob/master/memo.md
+
 # AngularTourOfHeroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
